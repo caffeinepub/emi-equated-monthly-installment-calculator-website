@@ -1,0 +1,19 @@
+{
+  "backend/main.mo": "Minimal Motoko canister defining an empty actor.",
+  "feature_evidence.json": "Lists implemented EMI history features, associated files, components, and test IDs with high confidence.",
+  "frontend-file-summaries.txt": "Prewritten summaries of key frontend files including components, hooks, utilities, and styling.",
+  "frontend/index.css": "Tailwind base and theme variables defining color tokens and global styles with light/dark mode support.",
+  "frontend/index.html": "Basic HTML shell loading the React app through main.tsx.",
+  "frontend/src/App.tsx": "Main layout component rendering header, EMI calculator content, and footer.",
+  "frontend/src/components/EmiCalculator.tsx": "Full EMI calculator UI with validation, computation, tenure units, formatted output, and integrated history management.",
+  "frontend/src/hooks/useActor.ts": "React hook creating and managing an authenticated or anonymous backend actor with react-query.",
+  "frontend/src/hooks/useEmiCalculationHistory.ts": "Hook managing EMI calculation history with localStorage persistence, add/clear operations, and entry retrieval.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Context and hooks for Internet Identity authentication, handling login, logout, and identity persistence.",
+  "frontend/src/hooks/useQueries.ts": "Placeholder file indicating no backend queries are needed for EMI calculations.",
+  "frontend/src/index.css": "Tailwind theme variables and global styles using warm neutral backgrounds and emerald accents with dark mode.",
+  "frontend/src/lib/emi.ts": "Provides an EMI calculator using the standard formula, returning monthly EMI, total payment, and interest with validation.",
+  "frontend/src/lib/format.ts": "Contains number-formatting helpers for currency and integer display using Intl.NumberFormat.",
+  "frontend/src/main.tsx": "Bootstraps the React app with React Query and Internet Identity provider wrappers.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration extending theme settings, colors, animations, and enabling plugins.",
+  "project_state.json": "JSON metadata describing project state, features, issues, and EMI calculator requirements."
+}

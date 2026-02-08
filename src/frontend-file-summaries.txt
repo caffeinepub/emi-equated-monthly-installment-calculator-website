@@ -1,0 +1,10 @@
+{
+  "frontend/src/App.tsx": "Main application component with header, footer, and EMI calculator layout using a warm emerald theme.",
+  "frontend/src/components/EmiCalculator.tsx": "Complete EMI calculator component with input validation, tenure unit selection, formatted results display, and integrated calculation history section that allows loading past calculations and clearing history with confirmation.",
+  "frontend/src/lib/emi.ts": "Pure EMI calculation logic implementing the standard formula with monthly compounding and special handling for 0% interest.",
+  "frontend/src/lib/format.ts": "Number and currency formatting utilities using Intl.NumberFormat for consistent display with thousands separators.",
+  "frontend/src/index.css": "Global styles with OKLCH color system featuring warm neutral backgrounds and emerald/green accent colors for both light and dark modes.",
+  "frontend/tailwind.config.js": "Tailwind configuration with Inter font family, custom shadows, and extended theme tokens matching the emerald color scheme.",
+  "frontend/src/hooks/useQueries.ts": "Placeholder file for React Query hooks (empty as all calculations are client-side).",
+  "frontend/src/hooks/useEmiCalculationHistory.ts": "Custom React hook that manages EMI calculation history with localStorage persistence, providing APIs to add entries, clear history, and retrieve past calculations with a maximum of 50 stored items."
+}

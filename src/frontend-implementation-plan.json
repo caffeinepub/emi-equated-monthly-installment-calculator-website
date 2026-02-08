@@ -1,0 +1,50 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "EMI calculator: local calculation history with load & clear",
+  "requirements": [
+    {
+      "id": "REQ-4",
+      "summary": "Add an on-page Calculation History section that records each successful EMI calculation and displays entries newest-first.",
+      "acceptanceCriteria": [
+        "History entries are only added after inputs validate successfully and a result is produced.",
+        "Each history item shows at least: timestamp (local time), principal, rate, tenure (months), and monthly EMI (formatted consistently with existing formatters).",
+        "History list is shown on the main page without navigating away from the calculator."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/hooks/useEmiCalculationHistory.ts",
+          "operation": "create",
+          "description": "Create a dedicated history hook that defines the history entry shape (principal, annual rate, tenure months, monthly EMI, total interest, total payment, timestamp) and exposes APIs to append/read entries in reverse-chronological order. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/EmiCalculator.tsx",
+          "operation": "modify",
+          "description": "Integrate the Calculation History section into the existing calculator page (no navigation), and ensure a history item is appended only after validation passes and a calculation result is successfully produced; render entries in reverse chronological order and format numeric fields using existing formatters. Use existing shadcn/ui components already in the app (e.g., Card, Button, Alert) to compose the section—do not edit files under frontend/src/components/ui. Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Persist calculation history in browser storage; allow loading a past entry into inputs and clearing history with confirmation.",
+      "acceptanceCriteria": [
+        "History persists across reloads using browser storage (no backend required).",
+        "Clicking a history entry (or a dedicated 'Load' action) populates principal, interest rate, and tenure inputs (including the correct tenure unit handling so the effective months match the saved record).",
+        "A 'Clear history' action is available and requires confirmation before deletion.",
+        "Clearing history removes both the on-screen list and the persisted stored data."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/hooks/useEmiCalculationHistory.ts",
+          "operation": "modify",
+          "description": "Add local persistence via browser storage (e.g., localStorage) with safe parse/validation and a versioned storage key; expose actions to load history on mount, clear persisted history, and provide a way to retrieve an entry for loading into the form. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/EmiCalculator.tsx",
+          "operation": "modify",
+          "description": "Wire history persistence and controls: (a) provide a per-entry 'Load' action (or click row) that populates principal/interest/tenure fields and sets tenure unit such that effective months exactly match the saved tenureMonths (e.g., switch to 'months' and set tenure accordingly), and (b) add a 'Clear history' control that prompts the user for confirmation before clearing both UI state and persisted storage. Use existing shadcn/ui Button/Card composition; do not modify frontend/src/components/ui. Verify the component's usage instructions before implementing."
+        }
+      ]
+    }
+  ]
+}

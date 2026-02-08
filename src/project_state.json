@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "Website project: EMI (Equated Monthly Installment) calculator.",
+  "architectural_notes": [],
+  "known_issues": [
+    "Deployment/domain setup failing due to invalid domain name format (must be 5–50 chars; only letters, numbers, hyphens)."
+  ],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-single-page-emi-calculator-website-where-a-user-can-input-loan-details-principal-amount-annual-interest-rate-and-loan-tenure-and-see-the-calculated-emi-result",
+      "title": "Create a single-page EMI calculator website where a user can input loan details (principal amount, annual interest rate, and loan tenure) and see the calculated EMI result.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-input-validation-and-friendly-error-handling-for-the-emi-calculator",
+      "title": "Implement input validation and friendly error handling for the EMI calculator.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-clear-coherent-visual-theme-and-layout-for-the-emi-calculator-and-apply-it-consistently-across-the-page",
+      "title": "Add a clear, coherent visual theme and layout for the EMI calculator and apply it consistently across the page.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-calculation-history-section-to-the-emi-calculator-that-records-each-successful-emi-calculation-principal-annual-interest-rate-tenure-in-months-monthly-emi-total-interest-total-payment-and-a-timestamp-and-displays-the-list-in-reverse-chronological-order",
+      "title": "Add a Calculation History section to the EMI calculator that records each successful EMI calculation (principal, annual interest rate, tenure in months, monthly EMI, total interest, total payment, and a timestamp) and displays the list in reverse chronological order.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-persist-the-calculation-history-locally-in-the-browser-so-it-remains-available-after-page-refresh-and-provide-controls-to-a-re-load-a-past-calculation-into-the-input-fields-and-b-clear-the-entire-history-with-a-confirmation-step",
+      "title": "Persist the calculation history locally in the browser so it remains available after page refresh, and provide controls to (a) re-load a past calculation into the input fields and (b) clear the entire history with a confirmation step.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Build a website that calculates EMI based on loan inputs (e.g., principal, interest rate, tenure).",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "EMI (Equated Monthly Installment) Calculator Website",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

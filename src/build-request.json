@@ -1,0 +1,74 @@
+{
+  "kind": "build_request",
+  "title": "Add calculation history to the EMI calculator",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-4",
+      "text": "Add a Calculation History section to the EMI calculator that records each successful EMI calculation (principal, annual interest rate, tenure in months, monthly EMI, total interest, total payment, and a timestamp) and displays the list in reverse chronological order.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-3",
+          "msg-12"
+        ],
+        "quotes": [
+          "Your EMI calculator is ready to try out — would you like to add a simple history of past calculations next?",
+          "Do it"
+        ]
+      },
+      "acceptanceCriteria": [
+        "History entries are only added after inputs validate successfully and a result is produced.",
+        "Each history item shows at least: timestamp (local time), principal, rate, tenure (months), and monthly EMI (formatted consistently with existing formatters).",
+        "History list is shown on the main page without navigating away from the calculator."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Persist the calculation history locally in the browser so it remains available after page refresh, and provide controls to (a) re-load a past calculation into the input fields and (b) clear the entire history with a confirmation step.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-3",
+          "msg-12"
+        ],
+        "quotes": [
+          "Your EMI calculator is ready to try out — would you like to add a simple history of past calculations next?",
+          "Do it"
+        ]
+      },
+      "acceptanceCriteria": [
+        "History persists across reloads using browser storage (no backend required).",
+        "Clicking a history entry (or a dedicated 'Load' action) populates principal, interest rate, and tenure inputs (including the correct tenure unit handling so the effective months match the saved record).",
+        "A 'Clear history' action is available and requires confirmation before deletion.",
+        "Clearing history removes both the on-screen list and the persisted stored data."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not edit files under frontend/src/components/ui (compose existing UI components instead).",
+    "Do not modify immutable hook files: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx.",
+    "Keep the backend as a single Motoko actor; do not introduce additional backend services."
+  ],
+  "nonGoals": [
+    "Adding server-side/user-account-based history synced to the Internet Computer backend.",
+    "Adding real-time collaboration or sharing of histories between users/devices.",
+    "Changing the existing EMI formula/logic beyond what is required to store and display computed results."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [
+      "Use English for any user-facing text."
+    ],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

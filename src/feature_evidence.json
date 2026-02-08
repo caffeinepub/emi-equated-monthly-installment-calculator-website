@@ -1,0 +1,43 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-add-a-calculation-history-section-to-the-emi-calculator-that-records-each-successful-emi-calculation-principal-annual-interest-rate-tenure-in-months-monthly-emi-total-interest-total-payment-and-a-timestamp-and-displays-the-list-in-reverse-chronological-order",
+      "featureTitle": "Add a Calculation History section to the EMI calculator that records each successful EMI calculation (principal, annual interest rate, tenure in months, monthly EMI, total interest, total payment, and a timestamp) and displays the list in reverse chronological order.",
+      "files": [
+        "frontend/src/components/EmiCalculator.tsx",
+        "frontend/src/hooks/useEmiCalculationHistory.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-persist-the-calculation-history-locally-in-the-browser-so-it-remains-available-after-page-refresh-and-provide-controls-to-a-re-load-a-past-calculation-into-the-input-fields-and-b-clear-the-entire-history-with-a-confirmation-step",
+      "featureTitle": "Persist the calculation history locally in the browser so it remains available after page refresh, and provide controls to (a) re-load a past calculation into the input fields and (b) clear the entire history with a confirmation step.",
+      "files": [
+        "frontend/src/components/EmiCalculator.tsx",
+        "frontend/src/hooks/useEmiCalculationHistory.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

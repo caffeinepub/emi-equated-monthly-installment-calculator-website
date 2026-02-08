@@ -1,0 +1,54 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-08T17:06:07.433Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 2,
+    "implemented": 2,
+    "items": [
+      {
+        "id": "REQ-4",
+        "summary": "Add a Calculation History section to the EMI calculator that records each successful EMI calculation (principal, annual interest rate, tenure in months, monthly EMI, total interest, total payment, and a timestamp) and displays the list in reverse chronological order.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/hooks/useEmiCalculationHistory.ts",
+          "frontend/src/components/EmiCalculator.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/hooks/useEmiCalculationHistory.ts",
+          "frontend/src/components/EmiCalculator.tsx"
+        ]
+      },
+      {
+        "id": "REQ-5",
+        "summary": "Persist the calculation history locally in the browser so it remains available after page refresh, and provide controls to (a) re-load a past calculation into the input fields and (b) clear the entire history with a confirmation step.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/hooks/useEmiCalculationHistory.ts",
+          "frontend/src/components/EmiCalculator.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/hooks/useEmiCalculationHistory.ts",
+          "frontend/src/components/EmiCalculator.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "build-template/README.md",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/src/components/EmiCalculator.tsx",
+    "frontend/src/hooks/useEmiCalculationHistory.ts",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}
